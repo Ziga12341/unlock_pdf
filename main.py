@@ -21,7 +21,6 @@ def password_generator(index):
     all = string.ascii_letters + string.digits
     keywords1 = [a + b for a, b in product(all, repeat=2)] # all combinations for first tvo letters ( with index we specify which we eill use)
     keywords2 = {a + b + c + d for a, b, c, d in product(all, repeat=4)} # all combinations for other 4 letters
-    print(keywords1[0])
     for i in keywords2: #here we generate passwords with specify index
         pass_w = keywords1[index] + i
         password_ab.add(pass_w)

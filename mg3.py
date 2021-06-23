@@ -6,8 +6,8 @@ from datetime import datetime
 from datetime import date
 import smtplib, ssl
 
-from mg import time
-from mg import password_generator
+from main import time
+from main import password_generator
 
 def variant3(): #this function call password_generator(index); read which combination of first two letters is next
     file = open("number3.txt", "r", encoding="utf-8").readlines() #open file that alerady exist in system in the same folder
