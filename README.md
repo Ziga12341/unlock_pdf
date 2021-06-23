@@ -1,29 +1,32 @@
-Program služi odklepanju računalniško kodiranih gesel z dolžino šest znakov.
+Program služi odklepanju .pdf datotek računalniško kodiranih gesel z dolžino šest znakov.
 Uporabljajte odgovorno.
 
-1. UVOD
+Cilj/Namen: Vedel, da je geslo .pdf katerega odpiram dolgo 6 znakov in kako je kodirano. Želja je odpreti tako močno kodirano geslo z windows računalnikom in pythonovo knjižnico pikepdf ter da vse skupaj teče v ozadju in ne obremenjuje računalnika.
+Poleg tega sem želel doseči, da ne rabim hoditi gledat v določeno mapo ali je računalnik našel geslo, pač pa da mi ga enostavno pošlje na email.
 
-Tukaj napišemo kako se uporablja moj program za odpiranje pdfjev.
+
+1. UVOD
 
 Navodila so za Windows 10
 
 Pri testu sem uporabljal procesor i9-9900K 3,60GHz in 32 giga rama DDR4.
 Obremenjenost računalnika je bila približno procesor 50% (4,62 GHz) in 55% (17,5 GB) RAM. Računalnik je kljub obremenitvam omogočal normalno delo.
 
-pri runanju 4. programov hkraati kar pomeni rezultat 3150 pogledanih gesel/sekundo.
+V primeru da sem zagnal en program je bila obremenitev računalnika manjša ampak je pregledal le 700 gesel na sekundo. Zato sem naložil datoteke za 4 programe.
+Pri runanju 4. programov hkrati, kar pomeni rezultat 3150 pogledanih gesel/sekundo.
 
-sam sem odpiral .pdf ki je bil zaklenjen s šest znaki ASCII in števke. Skupaj pride 62 kombinacij za vsako polje vse skupaj predstavlja
+Sam sem odpiral .pdf ki je bil zaklenjen s šest znaki ASCII in števke. Skupaj pride 62 kombinacij za vsako polje vse skupaj predstavlja
 56800235584 (pribljižno 56 milijard kombinacij)
 
-problem sem razdelil po več manjših: tako da sem prva dva znaka določal sam s seznamom (aa,ab,ac,...) potem pa dodal zadnje 4 znake generično
+Problem sem razdelil na več manjših: tako da sem prva dva znaka določal sam s seznamom (aa,ab,ac,...) potem pa dodal zadnje 4 znake generično
 na ta način sem dobil 14776336 kombinacij po 3844 (za prva znaka). Tako sem imel 3844 obravnavanj.
 
 S hitrostjo, ki mi jo omogoča, če zaženem 4 programe hkrati, je pomenilo 0.47 procentov na dan oziromo 18 pogledanih obravnavanj v enem dnevu.
-V 213 dneh bo pogledal vse kombinacije.
+V 213 dneh bo računalnik pogledal vse kombinacije.
 
 1.1
 
-Porgram omogoča da teče v ozadju. Sam si zapisuje kje je ostal (da lahko pogleda vseh 3844 kombinacij). Tudi če pride do izpada elektrike restarta računalnika ve kje je ostal
+Porgram omogoča, da teče v ozadju. Sam si zapisuje kje je ostal (da lahko pogleda vseh 3844 kombinacij). Tudi če pride do izpada elektrike restarta računalnika ve kje je ostal
 za to služijo datiteke stevilka1.txt, stevilka2.txt,... bljižnice launch_bat_mg1.vbs, launch_bat_mg2.vbs,... je potrebno prilepiti v "zagon (startup)" C:\Users\[***]\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 to služi da se ob ponovnem zagonu v ozadju zažene program. Koliko jih je pogledal program sproti zapisuje v mapo status.txt. Tam napiše tudi geslo ko ga najde. Program omogoča da pošlje geslo tudi na email ko ga le ta odkrije.
 Potrebno je ustvariti nov račun na google in omogočiti email za razvijalce (vir: https://realpython.com/python-send-email/; poglavje: Sending a Plain-Text Email).
@@ -56,16 +59,13 @@ Skupiraj ".vbs - Bljižnica v zagon (startup) win + r shell:startup
 Ko naložite vse priložene datoteke v določeno mapo
 V mapo morate prilepiti .pdf. Datoteko zaščiteno z geslom preimenujte v unlock.pdf
 
-v datoteki launch_bat_mg#.vbs morate spacificirati pot. Torej v katerem direktoriju se nahaja vaš program C:\\users... 
-
-v datoteki mg.py v funkciji passwprd_generator morate spremeniti polja za vpis v gmail server.login(...) in server.sendmail(...)
 
 
-Po želji lahko spremenite dolžino passworda v password_generator(index pod keywords1 in keywords2) Lahko dodate še posebne znake...
 
 
-Ko je vse naloženo in deluje, desni klik na mapo in skrij mapo. Torej da osnovna mapa kjer je vse shranjeno ni prikazana v sistemu.
 
+
+Ko je vse naloženo in deluje, desni klik na mapo in skrij mapo
 
 
 

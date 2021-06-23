@@ -21,7 +21,7 @@ def password_generator(index):
     all = string.ascii_letters + string.digits
     keywords1 = [a + b for a, b in product(all, repeat=2)] # all combinations for first tvo letters ( with index we specify which we eill use)
     keywords2 = {a + b + c + d for a, b, c, d in product(all, repeat=4)} # all combinations for other 4 letters
-
+    print(keywords1[0])
     for i in keywords2: #here we generate passwords with specify index
         pass_w = keywords1[index] + i
         password_ab.add(pass_w)
@@ -44,7 +44,6 @@ def password_generator(index):
             # wrong password, just continue in the loop
             continue
     file.write(f"    password generator:({index}); first two letters: ---{keywords1[index]}--- chacked at  {time()}\n") #status update; that you know which kombinations computer already chacked
-
 
 
 def variant1(): #this function call password_generator(index); read which combination of first two letters is next
