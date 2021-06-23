@@ -7,7 +7,7 @@ from datetime import date
 import smtplib, ssl
 
 
-def time(): # function print current time and date. We will need this later to see when current index is done.
+def time(): # function return current time and date. We will need this later to see when current index is done.
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
     today = date.today()
