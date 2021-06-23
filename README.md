@@ -47,7 +47,6 @@ pip install tqdm
 
 
 
-
 mg#.bat je namenjena temu da pokliče določeno funkcijo (variant#() v mg#.py). V mg# so uvožene funkcije iz main.py. Launch_bat_mg#.vbs je namenjena temu da zažene program v ozadju. Torej da se vidi le pod upravitelj opravil da računalnik dejansko žene ta pythonov file
 vse kar morate spremljati je datoteka status.txt kjer vam pove koliko je že pogledal gesel ali je že našel geslo ter kakšno je. Geslo program sam pošlje na mail (ustvariti Google račun - email za razvijalce in spremeniti v main.py svoj naslov
 
