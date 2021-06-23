@@ -68,4 +68,10 @@ V mapo morate prilepiti .pdf. Datoteko zaščiteno z geslom preimenujte v unlock
 Ko je vse naloženo in deluje, desni klik na mapo in skrij mapo
 
 
+4. VIRI
+
+https://pypi.org/project/pikepdf/
+https://realpython.com/python-send-email/; poglavje: Sending a Plain-Text Email
+
+
 
