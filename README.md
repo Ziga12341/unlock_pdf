@@ -63,8 +63,20 @@ V mapo morate prilepiti .pdf. Datoteko zaščiteno z geslom preimenujte v unlock
 
 Ko je vse naloženo in deluje, desni klik na mapo in skrij mapo
 
+4 TEŽAVE
 
-4 VIRI
+Če se vam pojavla težava z .bat skripto je to verjetno zato ker sistem ne ve iz kje naj bere python. 
+V tem primeru spremenite #.bat tako da sistemu programu poveste kje imate spravljen/naložen python.exe:
+"C[***]\AppData\Local\Programs\Python\Python37\python.exe"
+"C:\[***]\mg#.py"
+pause
+
+ter v mape mg#.py na kondu dodajte print(variant#())
+
+V primeru težav z uvozom paythonovih knjižnic.
+Odprite cmd. Postavite se v direktory kjer imate shranjene datoteke tega projekta in tam zaženite pip install pikepdf, pip install **,...
+
+5 VIRI
 
 https://pypi.org/project/pikepdf/
 https://realpython.com/python-send-email/; poglavje: Sending a Plain-Text Email
