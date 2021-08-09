@@ -23,4 +23,3 @@ def variant1(): #this function call password_generator(index); read which combin
 
 
 
-print(variant1())
