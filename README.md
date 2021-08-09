@@ -10,7 +10,7 @@ Poleg tega sem želel doseči, da ni potrebno pogledati določeno mapo ali je ra
 
 
 #### 1 UVOD
-Alt-H1
+
 
 Navodila so za Windows 10
 
