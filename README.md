@@ -1,4 +1,4 @@
-﻿###UNLOCK PDF
+﻿### UNLOCK PDF
 
 Program služi odklepanju .pdf datotek računalniško kodiranih gesel z dolžino šest znakov.
 Uporabljajte odgovorno.
@@ -9,7 +9,8 @@ Cilj/Namen: Vedel sem, da je geslo .pdf katerega odpiram dolgo 6 znakov in kako 
 Poleg tega sem želel doseči, da ni potrebno pogledati določeno mapo ali je računalnik našel geslo, pač pa da mi ga enostavno pošlje na e-mail.
 
 
-#####1 UVOD
+##### 1 UVOD
+Alt-H1
 
 Navodila so za Windows 10
 
@@ -28,12 +29,12 @@ na ta način sem dobil 14776336 kombinacij po 3844 (za prva znaka). Tako sem ime
 S hitrostjo, ki mi jo omogoča, če zaženem 4 programe hkrati, je pomenilo 0.47 procentov na dan oziroma 18 pregledanih obravnavanj v enem dnevu.
 V 213 dneh bo računalnik pogledal vse kombinacije.
 
-######1.1 HIPOTEZA
+###### 1.1 HIPOTEZA
 
 6 mestno geslo ASCII zznaki in štivilke ni varno geslo, saj se ga da relativno hitro odpreti.
 
 
-######1.2 DELOVANJE PROGRAMA
+###### 1.2 DELOVANJE PROGRAMA
 
 Program omogoča, da teče v ozadju. Sam si zapisuje kje je ostal (da lahko pogleda vseh 3844 kombinacij). Tudi če pride do izpada elektrike ali ponovnega zagona računalnika računalnika »ve« kje je ostal
 za to služijo datoteke number1.txt, number2.txt,... V teh datotekah je nastavljeno kje (pri katerem indeksu) posamezen program začne. Recimo pri number1.txt začne pri 0 in dela do 999, drugi porgram prebere v numbre2 številko 1000, tam začne in neha pri 1999 itd.
@@ -42,7 +43,7 @@ To služi, da se ob ponovnem zagonu v ozadju zažene program. Koliko jih je pogl
 Potrebno je ustvariti nov račun na Google in omogočiti e-mail za razvijalce (vir: https://realpython.com/python-send-email/; poglavje: Sending a Plain-Text Email).
 
 
-#####2 NAMESTITEV
+##### 2 NAMESTITEV
 
 Nameščen morate imeti python 3.# novejše verzije
 Prenesite vse datoteke v mapo.
@@ -64,14 +65,14 @@ Najprej zaženite .bat file, da vidite če normalno deluje ali javi kakšno napa
 Skopiraj vse .vbs – Bljižnica v zagon (startup) win + r shell:startup
 
 
-#####3 KAJ MORATE SPREMENITI
+##### 3 KAJ MORATE SPREMENITI
 
 Ko naložite vse priložene datoteke v določeno mapo
 V mapo morate prilepiti .pdf. Datoteko zaščiteno z geslom preimenujte v unlock.pdf
 
 Ko je vse naloženo in deluje, desni klik na mapo in skrij mapo
 
-#####4 TEŽAVE
+##### 4 TEŽAVE
 
 Če se vam pojavla težava z .bat skripto je to verjetno zato ker sistem ne ve iz kje naj bere python. 
 V tem primeru spremenite #.bat tako da sistemu programu poveste kje imate spravljen/naložen python.exe:
@@ -84,14 +85,14 @@ ter v mape mg#.py na kondu dodajte print(variant#())
 V primeru težav z uvozom paythonovih knjižnic.
 Odprite cmd. Postavite se v direktory kjer imate shranjene datoteke tega projekta in tam zaženite pip install pikepdf, pip install **,...
 
-#####5 ZAKLJUČEK
+##### 5 ZAKLJUČEK
 
 Po 787 obravnavanjih od 3844 sem v mojem primeru odkril geslo. Kar pomeni da je bilo potrebno pogledati 20% vseh možnosti (okrog 11.5 milijard pregledanih možnosti).
 Sklep: Hipoteza je potrjena. V Dobrem mesecu dni (34 dni v mojem primeru) se da z zgoraj napisanim programom odpreti .pdf kodiran s 6 mestno kodo ASCII + številke (primer: HTR8ef).
 Takšno kodiranje gesel ni priporočljivo.
 
 
-#####6 VIRI
+##### 6 VIRI
 
 https://pypi.org/project/pikepdf/
 https://realpython.com/python-send-email/; poglavje: Sending a Plain-Text Email
